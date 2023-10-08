@@ -3,29 +3,31 @@
 #include <stdio.h>
 
 /**
- * main - assign a random number to the variable n each time it is execute
+ * main - prints if number is -ve, +ve or zero.
  *
- * Return: 0 Always
+ * Description: the program prints numbers if the are positive
+ * negative or zero
+ *
+ * Return: 0
  */
-
 int main(void)
 {
 	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n > 0)
+	/* your code goes there */
+	if  (n > 0)
 	{
-		printf("%d is positive \n", n);
+		printf("%i is positive\n", n);
 	}
 	else if (n < 0)
 	{
-		printf("%d is negative \n", n);
+		printf("%i is negative\n", n);
 	}
-
-	else
+	else if (n == 0)
 	{
-		printf("%d is zero \n", n);
+		printf("%i is zero\n", n);
 	}
 	return (0);
 }
